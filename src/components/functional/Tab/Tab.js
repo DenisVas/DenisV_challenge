@@ -29,7 +29,7 @@ function Tab(props) {
         <StyledTab cssBorderWidth={activeTab === label ? '2px' : '1px'} 
         onClick={() => props.onClick(label)} >
             {label}
-            <SmallRemark>{categoryEntries}</SmallRemark>
+            { categoryEntries && <SmallRemark>{categoryEntries}</SmallRemark> }
         </StyledTab>
     );
 }
