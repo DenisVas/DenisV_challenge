@@ -68,12 +68,12 @@ export const UserImage = styled.img`
 
 /**
  * Renders user list data component with attached callback function on close and user short info click
- * @param {Object} props - component props
- * @property {Object} user - user data object
+ * @param { Object } props - component props
+ * @property { Object } user - user data object
  * @callback handleContactClick - call back function with user index argument
- * @property {number} userListIndex - user list index
- * @property {bollean} showDetailed - is detailed card expanded
- * @returns {Object} UserContactListItem - react component
+ * @property { number } userListIndex - user list index
+ * @property { boolean } showDetailed - is detailed card expanded
+ * @returns { Object } UserContactListItem - react component
  */
 function UserContactListItem(props) {
     const { user, handleContactClick, userListIndex, showDetailed } = props;

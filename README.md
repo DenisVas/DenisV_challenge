@@ -3,7 +3,7 @@
 This project was bootstrapped with [Create React App]
 (https://github.com/facebook/create-react-app).
 
-Responsivnes - fluid.<br />
+Responsiveness - fluid.<br />
 Build process: npm install && npm start<br />
 Documentation JSDoc.<br />
 Unit test Jest 100% coverage<br />

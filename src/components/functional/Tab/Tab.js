@@ -17,11 +17,11 @@ const SmallRemark = styled.span`
 `
 /**
  * Renders single tab with attached call back function
- * @param {Object} props - react component props object
- * @property {String} activeTab - ative tab label
- * @property {String} label - current tab label
+ * @param { Object } props - react component props object
+ * @property { String } activeTab - active tab label
+ * @property { String } label - current tab label
  * @callback onClick - function with current tab label as argument
- * @returns {Object} - react Tab component
+ * @returns { Object } - react Tab component
  */
 function Tab(props) {
     const { activeTab, label, categoryEntries } = props;

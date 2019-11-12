@@ -15,7 +15,7 @@ const Title = styled.h2`
 /**
  * Creates user contact list fetched from server via store action by provided configuration to arrange fetched contacts
  * with categorization of user contacts by last name first letter
- * splited in tabs with letter as tab label and contact name, last name in short description in tab content
+ * splitted in tabs with letter as tab label and contact name, last name in short description in tab content
  * provides detailed contact information by clicking on contact short description to only one contact entry.
  */
 class ContactList extends React.Component {
@@ -28,8 +28,8 @@ class ContactList extends React.Component {
 
     /**
      * Update current open contact index
-     * @param {Number} contactIndex - current open datailed contact index in current tab
-     * @returns {Void}
+     * @param { Number } contactIndex - current open detailed contact index in current tab
+     * @returns { Void }
      */
     handleContactClick = (contactIndex) => {
         this.setState({
@@ -38,9 +38,9 @@ class ContactList extends React.Component {
     };
 
     /**
-     * Renders user contact data in short / detaild format
-     * @param {array} users - current tab contacts
-     * @returns {Array} users contacts react components collection
+     * Renders user contact data in short / detailed format
+     * @param { Array } users - current tab contacts
+     * @returns { Array } users contacts react components collection
      */
     renderUsersData = (users) => {
         const { activeUserCardIndex } = this.state;
@@ -59,9 +59,9 @@ class ContactList extends React.Component {
 
     /**
      * Prepares content to be passed to the Tabs component
-     * @param {Array} tabsData - array of tabs obejcts. tab Object example:
+     * @param { Array } tabsData - array of tabs objects. tab Object example:
      * @example {label: 'a', data: [...{...contactData}]}
-     * @returns {Array} users contacts react components collection
+     * @returns { Array } users contacts react components collection
      */
     renderTabs = (tabsData) => {
         const { renderUsersData } = this;

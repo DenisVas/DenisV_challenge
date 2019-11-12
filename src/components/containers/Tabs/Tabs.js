@@ -21,7 +21,9 @@ const TabsContentContainer = styled.ul`
 `
 /**
  * Creates Tabs based on passed children attributes
- * Single tab will be created for each passed <div lable="tabLable"> tab content </div> as child
+ * Single tab will be created for each passed <div label="tabLabel"> tab content </div> as child
+ * P.S.
+ * Build in a way so to be used as stand alone.
  */
 class Tabs extends Component {
   constructor(props) {
@@ -32,10 +34,10 @@ class Tabs extends Component {
   }
 
   /**
-   * Updateds information about current active tab
+   * Updated information about current active tab
    * triggers onTabChange callback function passed in props
-   * @param {String} tab - tab lable
-   * @returns {Void}
+   * @param { String } tab - tab label
+   * @returns { Void }
    */
   handleTabClick = (tab) => {
     const { onTabChange } = this.props;
@@ -44,14 +46,14 @@ class Tabs extends Component {
   }
 
   /**
-   * Rendreds tabs lables
-   * @param {ReactNode} tabsData - array with tabs child objectsreact children collection
-   * @example <div lable="tabLable"> tab content </div>
-   * @returns {ReactNode} tabs lables react components collection
+   * Renders tabs labels
+   * @param { ReactNode } tabsData - array with tabs child objects react children collection
+   * @example <div label="tabLabel"> tab content </div>
+   * @returns { ReactNode } tabs labels react components collection
    */
   renderTabsLabels = (tabsData, activeTab) => {
-        return tabsData.map(tabLable => {
-            const { label, categoryEntries } = tabLable.props;
+        return tabsData.map(tabLabel => {
+            const { label, categoryEntries } = tabLabel.props;
             return(
                 <Tab
                     activeTab={activeTab}
@@ -65,17 +67,17 @@ class Tabs extends Component {
     }
     /**
      * Filters passed down children to reflect current active tab
-     * @param {ReactNode} tabsData - react children collection
-     * @param {String} activeTab - current active tab
-     * @returns {ReactNode} tab content - react components collection
+     * @param { ReactNode } tabsData - react children collection
+     * @param { String } activeTab - current active tab
+     * @returns { ReactNode } tab content - react components collection
      */
-    renderTabContets = (tabsData, activeTab) => {
+    renderTabContents = (tabsData, activeTab) => {
         return tabsData.filter((tabData) => tabData.props.label === activeTab)
         .map(tabContent => tabContent.props.children);
     } 
 
   render() {
-    const { renderTabsLabels, renderTabContets } = this;
+    const { renderTabsLabels, renderTabContents } = this;
     const { activeTab } = this.state;
     const { children } = this.props;
     return (
@@ -84,7 +86,7 @@ class Tabs extends Component {
             {renderTabsLabels(children, activeTab)}
         </TabsTitleContainer>
         <TabsContentContainer>
-          {renderTabContets(children, activeTab)}
+          {renderTabContents(children, activeTab)}
         </TabsContentContainer>
       </div>
     );

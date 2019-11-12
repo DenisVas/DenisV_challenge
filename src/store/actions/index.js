@@ -11,7 +11,7 @@ export const updateContacts = (payload) => {
  * Normalize & categorize contacts data
  * @param { Array } categoriesArray -  plain array of category names  
  * @param { Array } usersList - array of contacts objects
- * @returns {Array} array of object split by categories
+ * @returns { Array } array of object split by categories
  */
 const normalizeContactList = (categoriesArray, usersList) => {
     // create object out of categories names where category name == key
@@ -34,7 +34,7 @@ const normalizeContactList = (categoriesArray, usersList) => {
 
 /**
  * Fetch contacts from server && normalize response for tabs display
- * @param {Object} config - request configuration object
+ * @param { Object } config - request configuration object
  * @example { userUrl:<string> url, numberCards:<number> number, tabs: <[]<string>> array}
  */
 export const getContactsList = (config) => {
