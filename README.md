@@ -7,7 +7,6 @@ Responsivnes - fluid.<br />
 Build process: npm install && npm start<br />
 Documentation JSDoc.<br />
 Unit test Jest 100% coverage<br />
-live version: https://denisvas.github.io/DenisV_chanlenge/build/
 
 ## Available Scripts
 
